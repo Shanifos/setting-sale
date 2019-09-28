@@ -1,5 +1,13 @@
+
 function selectSaleItems(items) {
-  return items
+
+  return items.discount > 0
 }
 
-module.exports = selectSaleItems
+const printSaleItems = (items) => items.filter(selectSaleItems)
+
+// function printSaleItems(items) {
+//   return items.filter(selectSaleItems)
+// }
+
+module.exports = printSaleItems
